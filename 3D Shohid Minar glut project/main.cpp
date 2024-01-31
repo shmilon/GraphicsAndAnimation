@@ -25,20 +25,6 @@ GLfloat lookX = 10;
 GLfloat lookY = 0;
 GLfloat lookZ = 0;
 
-// variable for mouse movement
-
-
-// end mouse controlling
-
-/// test showing
-void renderText(float x, float y, const char* text) {
-  glColor3f(1.0f, 1.0f, 1.0f); // white color
-  glRasterPos3f(x, y, 0.0f); // position text on screen
-
-  for (int i = 0; i < strlen(text); ++i) {
-    glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, text[i]);
-  }
-}
 
 /// functions for creating red circle
 void Draw() {
@@ -76,16 +62,6 @@ void DrawCircle(float cx, float cy, float r, int num_segments)
 }
 
 /// end creating red circle
-
-
-
-// mouse movement function
-
-
-// end mouse movement function
-
-
-
 
 
 static GLfloat v_cube[8][3] =
@@ -172,38 +148,6 @@ static void display(void)
 {
     // basic functions for display
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    /// show the text
-
-    // Convert float values to strings
-  char eyeXStr[16];
-  char eyeYStr[16];
-  char eyeZStr[16];
-  char lookXStr[16];
-  char lookYStr[16];
-  char lookZStr[16];
-
-  sprintf(eyeXStr, "%.2f", eyeX);
-  sprintf(eyeYStr, "%.2f", eyeY);
-  sprintf(eyeZStr, "%.2f", eyeZ);
-  sprintf(lookXStr, "%.2f", lookX);
-  sprintf(lookYStr, "%.2f", lookY);
-  sprintf(lookZStr, "%.2f", lookZ);
-
-  // Draw text at specific positions
-  renderText(10.0f, 10.0f, "Eye X:");
-  renderText(30.0f, 10.0f, eyeXStr);
-  renderText(10.0f, 20.0f, "Eye Y:");
-  renderText(30.0f, 20.0f, eyeYStr);
-  renderText(10.0f, 30.0f, "Eye Z:");
-  renderText(30.0f, 30.0f, eyeZStr);
-  renderText(10.0f, 40.0f, "Look X:");
-  renderText(30.0f, 40.0f, lookXStr);
-  renderText(10.0f, 50.0f, "Look Y:");
-  renderText(30.0f, 50.0f, lookYStr);
-  renderText(10.0f, 60.0f, "Look Z:");
-  renderText(30.0f, 60.0f, lookZStr);
-    /// end showing text
 
 
 
@@ -410,7 +354,7 @@ glPushMatrix();
 
     glPopMatrix();
 
-
+   // flagShow();
 
 
 
