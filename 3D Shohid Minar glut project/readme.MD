@@ -1,2 +1,3 @@
-## 3D Shohid Minar glut project
+## 3D Shahid Minar OpenGL C++ project. Shahid Minar OpenGL C++ project.
+
 
