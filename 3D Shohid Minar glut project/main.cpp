@@ -11,8 +11,6 @@
 #include<windows.h>
 #include<math.h>
 #include <cmath>
-// for the mouse movement
-
 using namespace std;
 
 const int width = 1000;
@@ -60,8 +58,8 @@ void DrawCircle(float cx, float cy, float r, int num_segments)
     }
     glEnd();
 }
-
 /// end creating red circle
+
 
 
 static GLfloat v_cube[8][3] =
@@ -149,8 +147,6 @@ static void display(void)
     // basic functions for display
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
-
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
@@ -160,16 +156,14 @@ static void display(void)
     glLoadIdentity();
    gluLookAt(eyeX,eyeY,eyeZ, lookX,lookY,lookZ, 0,1,0);
 
-   // Set camera position based on direction
-
-
-
     // end basic functions for display
 
+
+    //red circle shape
     DrawCircle(0,15,-5,50);
 
 
-    // Gound
+    // Ground
     glPushMatrix();
         glTranslated(-100,0,-150);
         glScaled(200,1,200);
@@ -180,7 +174,7 @@ static void display(void)
 
 
 
-//main field
+//main floor
     glPushMatrix();
         glTranslated(-50,1,0);
         glScaled(100,1,40);
@@ -198,11 +192,11 @@ static void display(void)
         glScaled(93,1,36);
         cube(.5,0,0);
     glPopMatrix();
-// field end
+// floor end
 
-    // minar 1
 
-    // main minar
+
+// main minar
 
     // minar 1
     glPushMatrix();
@@ -234,30 +228,120 @@ static void display(void)
 
     glPopMatrix();
 
-
-glPushMatrix();
-        glTranslated(-20,2,1);
+    // minar 2
+    glPushMatrix();
+        glTranslated(-20,4,1);
 
         glPushMatrix();
             glTranslated(7,0,0);
-            glScaled(1,20,1);
+            glScaled(1,18,1);
             cube(1,1,1);
         glPopMatrix();
 
         glPushMatrix();
             glTranslated(10,0,0);
-            glScaled(1,20,1);
+            glScaled(1,18,1);
             cube(1,1,1);
         glPopMatrix();
 
         glPushMatrix();
             glTranslated(13,0,0);
-            glScaled(1,20,1);
+            glScaled(1,18,1);
             cube(1,1,1);
         glPopMatrix();
 
         glPushMatrix();
-            glTranslated(7,20,0);
+            glTranslated(7,18,0);
+            glScaled(7,1,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+    glPopMatrix();
+
+// minar 3
+    glPushMatrix();
+        glTranslated(-30,4,1);
+
+        glPushMatrix();
+            glTranslated(7,0,0);
+            glScaled(1,16,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+        glPushMatrix();
+            glTranslated(10,0,0);
+            glScaled(1,16,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+        glPushMatrix();
+            glTranslated(13,0,0);
+            glScaled(1,16,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+        glPushMatrix();
+            glTranslated(7,16,0);
+            glScaled(7,1,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+    glPopMatrix();
+
+// minar 4
+glPushMatrix();
+        glTranslated(0,4,1);
+
+        glPushMatrix();
+            glTranslated(7,0,0);
+            glScaled(1,18,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+        glPushMatrix();
+            glTranslated(10,0,0);
+            glScaled(1,18,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+        glPushMatrix();
+            glTranslated(13,0,0);
+            glScaled(1,18,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+        glPushMatrix();
+            glTranslated(7,18,0);
+            glScaled(7,1,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+    glPopMatrix();
+
+    // minar 5
+    glPushMatrix();
+        glTranslated(10,4,1);
+
+        glPushMatrix();
+            glTranslated(7,0,0);
+            glScaled(1,16,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+        glPushMatrix();
+            glTranslated(10,0,0);
+            glScaled(1,16,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+        glPushMatrix();
+            glTranslated(13,0,0);
+            glScaled(1,16,1);
+            cube(1,1,1);
+        glPopMatrix();
+
+        glPushMatrix();
+            glTranslated(7,16,0);
             glScaled(7,1,1);
             cube(1,1,1);
         glPopMatrix();
@@ -265,96 +349,6 @@ glPushMatrix();
     glPopMatrix();
 
 
-glPushMatrix();
-        glTranslated(-30,0,1);
-
-        glPushMatrix();
-            glTranslated(7,0,0);
-            glScaled(1,20,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-        glPushMatrix();
-            glTranslated(10,0,0);
-            glScaled(1,20,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-        glPushMatrix();
-            glTranslated(13,0,0);
-            glScaled(1,20,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-        glPushMatrix();
-            glTranslated(7,20,0);
-            glScaled(7,1,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-    glPopMatrix();
-
-
-glPushMatrix();
-        glTranslated(0,2,1);
-
-        glPushMatrix();
-            glTranslated(7,0,0);
-            glScaled(1,20,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-        glPushMatrix();
-            glTranslated(10,0,0);
-            glScaled(1,20,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-        glPushMatrix();
-            glTranslated(13,0,0);
-            glScaled(1,20,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-        glPushMatrix();
-            glTranslated(7,20,0);
-            glScaled(7,1,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-    glPopMatrix();
-
-
-glPushMatrix();
-        glTranslated(10,0,1);
-
-        glPushMatrix();
-            glTranslated(7,0,0);
-            glScaled(1,20,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-        glPushMatrix();
-            glTranslated(10,0,0);
-            glScaled(1,20,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-        glPushMatrix();
-            glTranslated(13,0,0);
-            glScaled(1,20,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-        glPushMatrix();
-            glTranslated(7,20,0);
-            glScaled(7,1,1);
-            cube(1,1,1);
-        glPopMatrix();
-
-    glPopMatrix();
-
-   // flagShow();
 
 
 

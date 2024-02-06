@@ -234,7 +234,7 @@
 	<_mingw.h>
 	<stddef.h>
 
-1706732040 source:c:\users\shmilon\desktop\graphics lab\graphicsandanimation\3d shohid minar glut project\main.cpp
+1706733000 source:c:\users\shmilon\desktop\graphics lab\graphicsandanimation\3d shohid minar glut project\main.cpp
 	<iostream>
 	<GL/gl.h>
 	<GLUT/glut.h>
